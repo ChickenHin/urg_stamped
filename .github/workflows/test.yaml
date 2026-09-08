@@ -1,9 +1,6 @@
 name: ci
 on:
-  pull_request:
-  push:
-    branches:
-      - master
+  workflow_dispatch: 
 
 permissions:
   contents: read
@@ -18,6 +15,6 @@ jobs:
       enable-bot-comment: true
       bot-comment-api-base: "https://gh-bot.dev-sq.work"
       enable-codecov: true
-    secrets:
-      bot-comment-token: "b9ed4bd3-154f-4f5f-9722-412ef4c14446"
-      codecov-upload-token: ${{ secrets.CODECOV_TOKEN }}
+    # secrets:
+    #   bot-comment-token: "b9ed4bd3-154f-4f5f-9722-412ef4c14446"
+    #   codecov-upload-token: ${{ secrets.CODECOV_TOKEN }}
